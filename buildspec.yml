@@ -9,7 +9,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
-      - cp index.html /usr/share/nginx/html
+      - cp var/www/html/index.html /usr/share/nginx/html
 
   post_build:
     commands:
