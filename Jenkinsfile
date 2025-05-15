@@ -28,9 +28,8 @@ pipeline {
                     Build completed successfully!
                     
                     Build URL: ${env.BUILD_URL}
-                    
-                    Build Log:
-                    ${currentBuild.rawBuild.getLog(20).join('\n')}
+                    Job Name: ${env.JOB_NAME}
+                    Build Number: ${env.BUILD_NUMBER}
                 """,
                 to: 'your-email@example.com',
                 from: 'jenkins@your-domain.com'
@@ -43,9 +42,8 @@ pipeline {
                     Build failed!
                     
                     Build URL: ${env.BUILD_URL}
-                    
-                    Build Log:
-                    ${currentBuild.rawBuild.getLog(20).join('\n')}
+                    Job Name: ${env.JOB_NAME}
+                    Build Number: ${env.BUILD_NUMBER}
                 """,
                 to: 'your-email@example.com',
                 from: 'jenkins@your-domain.com'
