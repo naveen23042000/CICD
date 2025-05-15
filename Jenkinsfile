@@ -38,7 +38,7 @@ pipeline {
         failure {
             emailext (
                 subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
-                body: """
+                body: """\
                     Build failed!
                     
                     Build URL: ${env.BUILD_URL}
@@ -48,6 +48,6 @@ pipeline {
                 to: 'naveen.v2304@gmail.com',
                 from: 'naveenkumar@whitemastery.com'
             )
-        }
-    }
+        }
+    }
 }
