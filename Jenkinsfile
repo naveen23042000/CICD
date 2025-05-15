@@ -39,7 +39,7 @@ pipeline {
                     Build Number: ${env.BUILD_NUMBER}
                 """,
                 to: 'naveen.v2304@gmail.com',
-                from: 'naveenkumar@whitemastery.com',
+                
                 attachLog: true
             )
         }
@@ -54,7 +54,7 @@ pipeline {
                     Build Number: ${env.BUILD_NUMBER}
                 """,
                 to: 'naveen.v2304@gmail.com',
-                from: 'naveenkumar@whitemastery.com',
+               
                 attachLog: true
             )
         }
