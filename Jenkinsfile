@@ -8,7 +8,7 @@ pipeline {
     options {
         // Add timeout to prevent pipeline from hanging indefinitely
         timeout(time: 1, unit: 'HOURS')
-        
+        // Discard old builds to save disk space
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
     
