@@ -3,6 +3,7 @@
 echo "Hello from Jenkins CI/CD pipeline!"
 echo "Build executed at $(date)"
 echo "Build number: $BUILD_NUMBER"
+echo "# This line was added to triger CI Build"
 
 # Simulate some work
 echo "Performing task 1..."
