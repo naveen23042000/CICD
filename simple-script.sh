@@ -4,7 +4,7 @@
 echo "Hello from the CI/CD pipeline!"
 echo "This build was executed at: $(date)"
 echo "Running some sample tests..."
-
+echo "ertsyuiuytre"
 # Simulate some test being run
 sleep 2
 echo "Test 1: PASSED"
