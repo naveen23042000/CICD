@@ -60,10 +60,10 @@ pipeline {
         }
         
     }
-    stage ('post action') {
-        steps{
-            sleep time: 60, unit: 'SECONDS'
+        stage ('post action') {
+            steps{
+                sleep time: 60, unit: 'SECONDS'
+            }
         }
-    }
     
 }
