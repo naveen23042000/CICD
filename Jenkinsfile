@@ -6,7 +6,7 @@ pipeline {
     }
     
     options {
-       s
+       
         timeout(time: 1, unit: 'HOURS')
         
         buildDiscarder(logRotator(numToKeepStr: '10'))
@@ -60,4 +60,10 @@ pipeline {
         }
         
     }
+    stage ('post action') {
+        steps{
+            sleep time: 60, unit: 'SECONDS'
+        }
+    }
+    
 }
