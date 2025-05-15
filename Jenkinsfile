@@ -21,33 +21,12 @@ pipeline {
     }
     
     post {
-        success {
-            emailext (
-                subject: "Pipeline Success: ${currentBuild.fullDisplayName}",
-                body: """
-                    Build completed successfully!
-                    
-                    Build URL: ${env.BUILD_URL}
-                    Job Name: ${env.JOB_NAME}
-                    Build Number: ${env.BUILD_NUMBER}
-                """,
-                to: 'naveen.v2304@gmail.com',
-                from: 'naveenkumar@whitemastery.com'
-            )
-        }
-        failure {
-            emailext (
-                subject: "Pipeline Failed: ${currentBuild.fullDisplayName}",
-                body: """
-                    Build failed!
-                    
-                    Build URL: ${env.BUILD_URL}
-                    Job Name: ${env.JOB_NAME}
-                    Build Number: ${env.BUILD_NUMBER}
-                """,
-                to: 'naveen.v2304@gmail.com',
-                from: 'naveenkumar@whitemastery.com'
-            )
-        }
+    always {
+        emailext (
+            subject: "Jenkins Build: ${currentBuild.fullDisplayName}: ${currentBuild.result}",
+            body: "Build URL: ${env.BUILD_URL}",
+            to: 'naveen.v2304@gmail.com'
+        )
     }
+}
 }
