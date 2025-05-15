@@ -38,7 +38,7 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'naveen.v2304@gmail.com',
+                to: 'shailesh.gupta.ext@gmail.com'
                 
                 attachLog: true
             )
@@ -53,7 +53,7 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'naveen.v2304@gmail.com',
+                to: 'shailesh.gupta.ext@gmail.com'
                
                 attachLog: true
             )
