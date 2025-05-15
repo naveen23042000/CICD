@@ -31,8 +31,8 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'your-email@example.com',
-                from: 'jenkins@your-domain.com'
+                to: 'naveen.v2304@gmail.com',
+                from: 'naveenkumar@whitemastery.com'
             )
         }
         failure {
@@ -45,8 +45,8 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'your-email@example.com',
-                from: 'jenkins@your-domain.com'
+                to: 'naveen.v2304@gmail.com',
+                from: 'naveenkumar@whitemastery.com'
             )
         }
     }
