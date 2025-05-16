@@ -24,11 +24,7 @@ pipeline {
             }
         }
         
-        stage('Post Action') {
-            steps {
-                sleep time: 60, unit: 'SECONDS'
-            }
-        }
+        
     }
     
     post {
