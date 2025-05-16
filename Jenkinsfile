@@ -6,9 +6,7 @@ pipeline {
     }
     
     options {
-       
         timeout(time: 1, unit: 'HOURS')
-        
         buildDiscarder(logRotator(numToKeepStr: '10'))
     }
     
@@ -25,6 +23,12 @@ pipeline {
                 sh './hello.sh'
             }
         }
+        
+        stage('Post Action') {
+            steps {
+                sleep time: 60, unit: 'SECONDS'
+            }
+        }
     }
     
     post {
@@ -38,8 +42,7 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'shailesh.gupta.ext@gmail.com',
-                
+                to: 'naveen.v2304@gmail.com',
                 attachLog: true
             )
         }
@@ -53,17 +56,9 @@ pipeline {
                     Job Name: ${env.JOB_NAME}
                     Build Number: ${env.BUILD_NUMBER}
                 """,
-                to: 'shailesh.gupta.ext@gmail.com',
-               
+                to: 'naveen.v2304@gmail.com',
                 attachLog: true
             )
         }
-        
     }
-        stage ('post action') {
-            steps{
-                sleep time: 60, unit: 'SECONDS'
-            }
-        }
-    
 }
